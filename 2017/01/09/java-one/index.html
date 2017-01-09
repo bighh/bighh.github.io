@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的第一篇博客 | 大伟的空间</title>
+  <title>java学习   新年好！！！！ | 大伟的空间</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这是我的第一篇博客，用于记录我的学习之路！！     加油！2017!!!  有个错别字我给改了！！！">
+  <meta name="description" content="周末没学习，内心很愧疚！！！加油！！！坚持就是胜利！字符串类的方法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一篇博客">
-<meta property="og:url" content="http://yoursite.com/2017/01/05/haha/index.html">
+<meta property="og:title" content="java学习   新年好！！！！">
+<meta property="og:url" content="http://yoursite.com/2017/01/09/java-one/index.html">
 <meta property="og:site_name" content="大伟的空间">
-<meta property="og:description" content="这是我的第一篇博客，用于记录我的学习之路！！     加油！2017!!!  有个错别字我给改了！！！">
-<meta property="og:updated_time" content="2017-01-05T09:02:12.456Z">
+<meta property="og:description" content="周末没学习，内心很愧疚！！！加油！！！坚持就是胜利！字符串类的方法">
+<meta property="og:updated_time" content="2017-01-09T02:18:17.184Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一篇博客">
-<meta name="twitter:description" content="这是我的第一篇博客，用于记录我的学习之路！！     加油！2017!!!  有个错别字我给改了！！！">
+<meta name="twitter:title" content="java学习   新年好！！！！">
+<meta name="twitter:description" content="周末没学习，内心很愧疚！！！加油！！！坚持就是胜利！字符串类的方法">
   
     <link rel="alternate" href="/atom.xml" title="大伟的空间" type="application/atom+xml">
   
@@ -67,10 +67,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-haha" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-java-one" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/01/05/haha/" class="article-date">
-  <time datetime="2017-01-05T06:07:08.000Z" itemprop="datePublished">2017-01-05</time>
+    <a href="/2017/01/09/java-one/" class="article-date">
+  <time datetime="2017-01-09T01:55:30.000Z" itemprop="datePublished">2017-01-09</time>
 </a>
     
   </div>
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一篇博客
+      java学习   新年好！！！！
     </h1>
   
 
@@ -89,12 +89,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>   这是我的第一篇博客，用于记录我的学习之路！！<br>     加油！2017!!!<br>  有个错别字我给改了！！！</p>
+        <h2 id="周末没学习，内心很愧疚！！！"><a href="#周末没学习，内心很愧疚！！！" class="headerlink" title="周末没学习，内心很愧疚！！！"></a>周末没学习，内心很愧疚！！！</h2><h3 id="加油！！！坚持就是胜利！"><a href="#加油！！！坚持就是胜利！" class="headerlink" title="加油！！！坚持就是胜利！"></a>加油！！！坚持就是胜利！</h3><h1 id="字符串类的方法"><a href="#字符串类的方法" class="headerlink" title="字符串类的方法"></a>字符串类的方法</h1><a id="more"></a>
+<h2 id="一、字符串"><a href="#一、字符串" class="headerlink" title="一、字符串"></a>一、字符串</h2><p>   String 类在java.lang包中，字符串变量属于对象，java吧String类声明为final类型，String类创建后不能修改。</p>
+<h2 id="二、String类对象的创建"><a href="#二、String类对象的创建" class="headerlink" title="二、String类对象的创建"></a>二、String类对象的创建</h2><p>声明：String stringName;<br>字符串的创建：StringName=new String(字符串常量）；</p>
+<h2 id="三、-String类的构造方法"><a href="#三、-String类的构造方法" class="headerlink" title="三、 String类的构造方法"></a>三、 String类的构造方法</h2><p>1、public String()<br>无参构造方法，用来创建空字符串的String对象。<br>‘1 String str1 = new String();’<br>‘2、public String(String value)’<br>用已知的字符串value创建一个String对象。<br> 1 String str2 = new String(“asdf”); 2 String str3 = new String(str2);<br>3、public String(char[] value)<br>用字符数组value创建一个String对象。</p>
+<p>1 char[] value = {“a”,”b”,”c”,”d”};<br>2 String str4 = new String(value);//相当于String str4 = new String(“abcd”);</p>
+<p>4、public String(char chars[], int startIndex, int numChars)<br>用字符数组chars的startIndex开始的numChars个字符创建一个String对象。</p>
+<p>1 char[] value = {“a”,”b”,”c”,”d”};<br>2 String str5 = new String(value, 1, 2);//相当于String str5 = new String(“bc”);</p>
+<p>5、public String(byte[] values)<br>用比特数组values创建一个String对象。</p>
+<p>1 byte[] strb = new byte[]{65,66};<br>2 String str6 = new String(strb);//相当于String str6 = new String(“AB”);</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/05/haha/" data-id="cixpgjc4q0000isqvrapi5tz9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/09/java-one/" data-id="cixpgjc560003isqva14snhtn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -103,19 +111,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/01/05/java-jishu/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          记录一下问题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/01/05/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/01/09/tencent/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">关于微信小程序（转）</div>
     </a>
   
 </nav>
