@@ -11,7 +11,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/01/09/java-one/index.html">
 <meta property="og:site_name" content="大伟的空间">
 <meta property="og:description" content="周末没学习，内心很愧疚！！！加油！！！坚持就是胜利！字符串类的方法">
-<meta property="og:updated_time" content="2017-01-09T02:18:17.184Z">
+<meta property="og:updated_time" content="2017-01-10T03:49:44.843Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="java学习   新年好！！！！">
 <meta name="twitter:description" content="周末没学习，内心很愧疚！！！加油！！！坚持就是胜利！字符串类的方法">
@@ -92,17 +92,84 @@
         <h2 id="周末没学习，内心很愧疚！！！"><a href="#周末没学习，内心很愧疚！！！" class="headerlink" title="周末没学习，内心很愧疚！！！"></a>周末没学习，内心很愧疚！！！</h2><h3 id="加油！！！坚持就是胜利！"><a href="#加油！！！坚持就是胜利！" class="headerlink" title="加油！！！坚持就是胜利！"></a>加油！！！坚持就是胜利！</h3><h1 id="字符串类的方法"><a href="#字符串类的方法" class="headerlink" title="字符串类的方法"></a>字符串类的方法</h1><a id="more"></a>
 <h2 id="一、字符串"><a href="#一、字符串" class="headerlink" title="一、字符串"></a>一、字符串</h2><p>   String 类在java.lang包中，字符串变量属于对象，java吧String类声明为final类型，String类创建后不能修改。</p>
 <h2 id="二、String类对象的创建"><a href="#二、String类对象的创建" class="headerlink" title="二、String类对象的创建"></a>二、String类对象的创建</h2><p>声明：String stringName;<br>字符串的创建：StringName=new String(字符串常量）；</p>
-<h2 id="三、-String类的构造方法"><a href="#三、-String类的构造方法" class="headerlink" title="三、 String类的构造方法"></a>三、 String类的构造方法</h2><p>1、public String()<br>无参构造方法，用来创建空字符串的String对象。<br>‘1 String str1 = new String();’<br>‘2、public String(String value)’<br>用已知的字符串value创建一个String对象。<br> 1 String str2 = new String(“asdf”); 2 String str3 = new String(str2);<br>3、public String(char[] value)<br>用字符数组value创建一个String对象。</p>
-<p>1 char[] value = {“a”,”b”,”c”,”d”};<br>2 String str4 = new String(value);//相当于String str4 = new String(“abcd”);</p>
-<p>4、public String(char chars[], int startIndex, int numChars)<br>用字符数组chars的startIndex开始的numChars个字符创建一个String对象。</p>
-<p>1 char[] value = {“a”,”b”,”c”,”d”};<br>2 String str5 = new String(value, 1, 2);//相当于String str5 = new String(“bc”);</p>
-<p>5、public String(byte[] values)<br>用比特数组values创建一个String对象。</p>
-<p>1 byte[] strb = new byte[]{65,66};<br>2 String str6 = new String(strb);//相当于String str6 = new String(“AB”);</p>
-
+<h2 id="三、-String类的构造方法"><a href="#三、-String类的构造方法" class="headerlink" title="三、 String类的构造方法"></a>三、 String类的构造方法</h2><p>1、public String()<br>无参构造方法，用来创建空字符串的String对象。</p>
+<pre><code>1 String str1 = new String(); 
+2 public String(String value)；
+</code></pre><p>用已知的字符串value创建一个String对象。</p>
+<pre><code>1 String str2 = new String(&quot;asdf&quot;); 
+2 String str3 = new String(str2); 
+3 public String(char[] value)
+</code></pre><p>用字符数组value创建一个String对象。</p>
+<pre><code>1 char[] value = {&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;};
+2 String str4 = new String(value);//相当于String str4 = new String(&quot;abcd&quot;);
+</code></pre><p>4、public String(char chars[], int startIndex, int numChars)<br>用字符数组chars的startIndex开始的numChars个字符创建一个String对象。</p>
+<pre><code>1 char[] value = {&quot;a&quot;,&quot;b&quot;,&quot;c&quot;,&quot;d&quot;};
+2 String str5 = new String(value, 1, 2);//相当于String str5 = new String(&quot;bc&quot;);
+</code></pre><p>5、public String(byte[] values)<br>用比特数组values创建一个String对象。</p>
+<pre><code>1 byte[] strb = new byte[]{65,66};
+2 String str6 = new String(strb);//相当于String str6 = new String(&quot;AB&quot;);
+</code></pre><h2 id="四、String类的常用方法"><a href="#四、String类的常用方法" class="headerlink" title="四、String类的常用方法"></a>四、String类的常用方法</h2><p>1、求字符串长度<br>length（）；//返回该字符串的长度；</p>
+<pre><code>1 String str =new String (&quot;asdasdasdf&quot;);
+2 int strlength=str.length();//strlength=10;
+</code></pre><p>2、求字符串某一位置字符<br>charAt(int index);<br>    1 String str =new String (“asdasdasdf”);<br>    2 char ch=str.charAt(4);返回第四位置上的字符（字符位置从零开始）；<br>3、提取字符串<br>1） substring(int beginIndex);//方法从 beginIndex位置起，从当前字符串中提取剩余字符串作为新字符串返回；<br>2） substring(int beginIndex,int endIndex);//该方法从 beginIndex位置起，至endIndex-1，提取一个新的字符串返回</p>
+<pre><code>1 String str1 = new String(&quot;asdfzxc&quot;);
+2 String str2 = str1.substring(2);//str2 = &quot;dfzxc&quot;
+3 String str3 = str1.substring(2,5);//str3 = &quot;dfz&quot;
+</code></pre><p>4、字符串比较<br>1）public int compareTo(String anotherString)//该方法是对字符串内容按字典顺序进行大小比较，通过返回的整数值指明当前字符串与参数字符串的大小关系。若当前对象比参数大则返回正整数，反之返回负整数，相等返回0。<br>2）public int compareToIgnore(String anotherString)//与compareTo方法相似，但忽略大小写。<br>3）public boolean equals(Object anotherObject)//比较当前字符串和参数字符串，在两个字符串相等的时候返回true，否则返回false。<br>4）public boolean equalsIgnoreCase(String anotherString)//与equals方法相似，但忽略大小写</p>
+<pre><code>1 String str1 = new String(&quot;abc&quot;);
+2 String str2 = new String(&quot;ABC&quot;);
+3 int a = str1.compareTo(str2);//a&gt;0
+4 int b = str1.compareToIgnore(str2);//b=0
+5 boolean c = str1.equals(str2);//c=false
+6 boolean d = str1.equalsIgnoreCase(str2);//d=true
+</code></pre><p>5、字符串连接<br>public String concat(String str)//将参数中的字符串str连接到当前字符串的后面，效果等价于”+”。</p>
+<pre><code>1 String str=&quot;aa&quot;.concat(&quot;bb&quot;).concat(&quot;cc&quot;);//相当于String str = &quot;aa&quot;+&quot;bb&quot;+&quot;cc&quot;;
+</code></pre><p>6、字符串中单个字符查找<br>1）public int indexOf(int ch/String str)//用于查找当前字符串中字符或子串，返回字符或子串在当前字符串中从左边起首次出现的位置，若没有出现则返回-1。<br>2) public int indexOf(int ch/String str, int fromIndex)//改方法与第一种类似，区别在于该方法从fromIndex位置向后查找。<br>3) public int lastIndexOf(int ch/String str)//该方法与第一种类似，区别在于该方法从字符串的末尾位置向前查找。<br>4) public int lastIndexOf(int ch/String str, int fromIndex)//该方法与第二种方法类似，区别于该方法从fromIndex位置向前查找。</p>
+<pre><code>1 String str = &quot;I am a good student&quot;;
+2 int a = str.indexOf(&apos;a&apos;);//a = 2
+3 int b = str.indexOf(&quot;good&quot;);//b = 7
+4 int c = str.indexOf(&quot;w&quot;,2);//c = -1
+5 int d = str.lastIndexOf(&quot;a&quot;);//d = 5
+6 int e = str.lastIndexOf(&quot;a&quot;,3);//e = 2
+</code></pre><p>7、字符串中字符的大小写转换<br>1)public String toLowerCase()//返回将当前字符串中所有字符转换成小写后的新串<br>2)public String toUpperCase()//返回将当前字符串中所有字符转换成大写后的新串</p>
+<pre><code>1 String str = new String(&quot;asDF&quot;);
+2 String str1 = str.toLowerCase();//str1 = &quot;asdf&quot;
+3 String str2 = str.toUpperCase();//str2 = &quot;ASDF&quot;
+</code></pre><p>8、字符串的字符的替换<br>1)public String replace(char oldChar, char newChar)//用字符newChar替换当前字符串中所有的oldChar字符，并返回一个新的字符串。<br>2)public String replaceFirst(String regex, String replacement)//该方法用字符replacement的内容替换当前字符串中遇到的第一个和字符串regex相匹配的子串，应将新的字符串返回。<br>3)public String replaceAll(String regex, String replacement)//该方法用字符replacement的内容替换当前字符串中遇到的所有和字符串regex相匹配的子串，应将新的字符串返回。</p>
+<pre><code>1 String str = &quot;asdzxcasd&quot;;
+2 String str1 = str.replace(&apos;a&apos;,&apos;g&apos;);//str1 = &quot;gsdzxcgsd&quot;
+3 String str2 = str.replace(&quot;asd&quot;,&quot;fgh&quot;);//str2 = &quot;fghzxcfgh&quot;
+4 String str3 = str.replaceFirst(&quot;asd&quot;,&quot;fgh&quot;);//str3 = &quot;fghzxcasd&quot;
+5 String str4 = str.replaceAll(&quot;asd&quot;,&quot;fgh&quot;);//str4 = &quot;fghzxcfgh&quot;
+</code></pre><p>9、其他方法<br>1）String trim()//截去字符串两端的空格，但对于中间的空格不处理。</p>
+<pre><code>1 String str = &quot; a sd &quot;;
+2 String str1 = str.trim();
+3 int a = str.length();//a = 6
+4 int b = str1.length();//b = 4
+</code></pre><p>2）boolean statWith(String prefix)或boolean endWith(String suffix)//用来比较当前字符串的起始字符或子字符串prefix和终止字符或子字符串suffix是否和当前字符串相同，重载方法中同时还可以指定比较的开始位置offset。</p>
+<pre><code>1 String str = &quot;asdfgh&quot;;
+2 boolean a = str.statWith(&quot;as&quot;);//a = true
+3 boolean b = str.endWith(&quot;gh&quot;);//b = true
+</code></pre><p>3）contains(String str)//判断参数s是否被包含在字符串中，并返回一个布尔类型的值。</p>
+<pre><code>1 String str = &quot;student&quot;;
+2 str.contains(&quot;stu&quot;);//true
+3 str.contains(&quot;ok&quot;);//false
+</code></pre><p>4）String[] split(String str)//将str作为分隔符进行字符串分解，分解后的字字符串在字符串数组中返回。</p>
+<pre><code>1 String str = &quot;asd!qwe|zxc#&quot;;
+2 String[] str1 = str.split(&quot;!|#&quot;);//str1[0] = &quot;asd&quot;;str1[1] = &quot;qwe&quot;;str1[2] = &quot;zxc&quot;;
+</code></pre><p>五、字符串与基本类的转换</p>
+<p>1、字符串转换为基本类型<br>java.lang包中有Byte、Short、Integer、Float、Double类的调用方法：<br>1)public static byte parseByte(String s)<br>2)public static short parseShort(String s)<br>3)public static short parseInt(String s)<br>4)public static long parseLong(String s)<br>5)public static float parseFloat(String s)<br>6)public static double parseDouble(String s)<br>例如：</p>
+<pre><code>1 int n = Integer.parseInt(&quot;12&quot;);
+2 float f = Float.parseFloat(&quot;12.34&quot;);
+3 double d = Double.parseDouble(&quot;1.124&quot;);
+</code></pre><p>2、基本类型转换为字符串类型<br>String类中提供了String valueOf()放法，用作基本类型转换为字符串类型。<br>1)static String valueOf(char data[])<br>2)static String valueOf(char data[], int offset, int count)<br>3)static String valueOf(boolean b)<br>4)static String valueOf(char c)<br>5)static String valueOf(int i)<br>6)static String valueOf(long l)<br>7)static String valueOf(float f)<br>8)static String valueOf(double d)<br>例如：</p>
+<pre><code>1 String s1 = String.valueOf(12);
+2 String s1 = String.valueOf(12.34);
+</code></pre>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/09/java-one/" data-id="cixpgjc560003isqva14snhtn" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/01/09/java-one/" data-id="cixqsy1d70005ygqvk6vu70ow" class="article-share-link">Share</a>
       
       
     </footer>
@@ -110,6 +177,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/01/10/The-harder-you-work-the-luckier-you-will-be/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          越努力越幸运
+        
+      </div>
+    </a>
   
   
     <a href="/2017/01/09/tencent/" id="article-nav-older" class="article-nav-link-wrap">
@@ -165,6 +241,10 @@
       <ul>
         
           <li>
+            <a href="/2017/01/10/The-harder-you-work-the-luckier-you-will-be/">越努力越幸运</a>
+          </li>
+        
+          <li>
             <a href="/2017/01/09/java-one/">java学习   新年好！！！！</a>
           </li>
         
@@ -178,10 +258,6 @@
         
           <li>
             <a href="/2017/01/05/haha/">我的第一篇博客</a>
-          </li>
-        
-          <li>
-            <a href="/2017/01/05/hello-world/">Hello World</a>
           </li>
         
       </ul>
